@@ -1,5 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuanLyNhanSuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuanLyNhanSuEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_BANGCONG" EntityType="QuanLyNhanSuModel.tb_BANGCONG" />
+    <EntitySet Name="tb_BAOHIEM" EntityType="QuanLyNhanSuModel.tb_BAOHIEM" />
+    <EntitySet Name="tb_BOPHAN" EntityType="QuanLyNhanSuModel.tb_BOPHAN" />
+    <EntitySet Name="tb_CONGTY" EntityType="QuanLyNhanSuModel.tb_CONGTY" />
+    <EntitySet Name="tb_CHUCVU" EntityType="QuanLyNhanSuModel.tb_CHUCVU" />
+    <EntitySet Name="tb_DANTOC" EntityType="QuanLyNhanSuModel.tb_DANTOC" />
+    <EntitySet Name="tb_HOPDONG" EntityType="QuanLyNhanSuModel.tb_HOPDONG" />
+    <EntitySet Name="tb_KHENTHUONG_KYLUAT" EntityType="QuanLyNhanSuModel.tb_KHENTHUONG_KYLUAT" />
+    <EntitySet Name="tb_LOAICA" EntityType="QuanLyNhanSuModel.tb_LOAICA" />
+    <EntitySet Name="tb_LOAICONG" EntityType="QuanLyNhanSuModel.tb_LOAICONG" />
+    <EntitySet Name="tb_NhanVien" EntityType="QuanLyNhanSuModel.tb_NhanVien" />
+    <EntitySet Name="tb_NHANVIEN_PHUCAP" EntityType="QuanLyNhanSuModel.tb_NHANVIEN_PHUCAP" />
+    <EntitySet Name="tb_PHONGBAN" EntityType="QuanLyNhanSuModel.tb_PHONGBAN" />
+    <EntitySet Name="tb_PHUCAP" EntityType="QuanLyNhanSuModel.tb_PHUCAP" />
+    <EntitySet Name="tb_TANGCA" EntityType="QuanLyNhanSuModel.tb_TANGCA" />
+    <EntitySet Name="tb_TONGIAO" EntityType="QuanLyNhanSuModel.tb_TONGIAO" />
+    <EntitySet Name="tb_TRINHDO" EntityType="QuanLyNhanSuModel.tb_TRINHDO" />
+    <AssociationSet Name="FK_tb_BANGCONG_tb_LOAICONG" Association="QuanLyNhanSuModel.FK_tb_BANGCONG_tb_LOAICONG">
+      <End Role="tb_LOAICONG" EntitySet="tb_LOAICONG" />
+      <End Role="tb_BANGCONG" EntitySet="tb_BANGCONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BANGCONG_tb_NhanVien" Association="QuanLyNhanSuModel.FK_tb_BANGCONG_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_BANGCONG" EntitySet="tb_BANGCONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BAOHIEM_tb_NhanVien" Association="QuanLyNhanSuModel.FK_tb_BAOHIEM_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_BAOHIEM" EntitySet="tb_BAOHIEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_BOPHAN" Association="QuanLyNhanSuModel.FK_tb_NhanVien_tb_BOPHAN">
+      <End Role="tb_BOPHAN" EntitySet="tb_BOPHAN" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_CONGTY1" Association="QuanLyNhanSuModel.FK_tb_NhanVien_tb_CONGTY1">
+      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_CHUCVU" Association="QuanLyNhanSuModel.FK_tb_NhanVien_tb_CHUCVU">
+      <End Role="tb_CHUCVU" EntitySet="tb_CHUCVU" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_HOPDONG_tb_NhanVien" Association="QuanLyNhanSuModel.FK_tb_HOPDONG_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_HOPDONG" EntitySet="tb_HOPDONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien" Association="QuanLyNhanSuModel.FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_KHENTHUONG_KYLUAT" EntitySet="tb_KHENTHUONG_KYLUAT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_TANGCA_tb_LOAICA" Association="QuanLyNhanSuModel.FK_tb_TANGCA_tb_LOAICA">
+      <End Role="tb_LOAICA" EntitySet="tb_LOAICA" />
+      <End Role="tb_TANGCA" EntitySet="tb_TANGCA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NHANVIEN_PHUCAP_tb_NhanVien" Association="QuanLyNhanSuModel.FK_tb_NHANVIEN_PHUCAP_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_NHANVIEN_PHUCAP" EntitySet="tb_NHANVIEN_PHUCAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_PHONGBAN" Association="QuanLyNhanSuModel.FK_tb_NhanVien_tb_PHONGBAN">
+      <End Role="tb_PHONGBAN" EntitySet="tb_PHONGBAN" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_TRINHDO" Association="QuanLyNhanSuModel.FK_tb_NhanVien_tb_TRINHDO">
+      <End Role="tb_TRINHDO" EntitySet="tb_TRINHDO" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_TANGCA_tb_NhanVien" Association="QuanLyNhanSuModel.FK_tb_TANGCA_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_TANGCA" EntitySet="tb_TANGCA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP" Association="QuanLyNhanSuModel.FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP">
+      <End Role="tb_PHUCAP" EntitySet="tb_PHUCAP" />
+      <End Role="tb_NHANVIEN_PHUCAP" EntitySet="tb_NHANVIEN_PHUCAP" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="tb_BANGCONG">
     <Key>
       <PropertyRef Name="MABC" />
@@ -13,8 +88,8 @@
     <Property Name="PHUTRA" Type="Int32" />
     <Property Name="MANV" Type="Int32" />
     <Property Name="IDLOAICONG" Type="Int32" />
-    <NavigationProperty Name="tb_LOAICONG" Relationship="Self.FK_tb_BANGCONG_tb_LOAICONG" FromRole="tb_BANGCONG" ToRole="tb_LOAICONG" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_BANGCONG_tb_NhanVien" FromRole="tb_BANGCONG" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_LOAICONG" Relationship="QuanLyNhanSuModel.FK_tb_BANGCONG_tb_LOAICONG" FromRole="tb_BANGCONG" ToRole="tb_LOAICONG" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_BANGCONG_tb_NhanVien" FromRole="tb_BANGCONG" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_BAOHIEM">
     <Key>
@@ -26,7 +101,7 @@
     <Property Name="NOICAP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NOIKHAMBENH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MANV" Type="Int32" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_BAOHIEM_tb_NhanVien" FromRole="tb_BAOHIEM" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_BAOHIEM_tb_NhanVien" FromRole="tb_BAOHIEM" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_BOPHAN">
     <Key>
@@ -34,7 +109,18 @@
     </Key>
     <Property Name="IDBP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENBP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_NhanVien_tb_BOPHAN" FromRole="tb_BOPHAN" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_BOPHAN" FromRole="tb_BOPHAN" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_CONGTY">
+    <Key>
+      <PropertyRef Name="MACTY" />
+    </Key>
+    <Property Name="MACTY" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENCONGTY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DIENTHOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_CONGTY1" FromRole="tb_CONGTY" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_CHUCVU">
     <Key>
@@ -42,7 +128,7 @@
     </Key>
     <Property Name="IDCV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_NhanVien_tb_CHUCVU" FromRole="tb_CHUCVU" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_CHUCVU" FromRole="tb_CHUCVU" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_DANTOC">
     <Key>
@@ -64,7 +150,7 @@
     <Property Name="THOIHAN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="HESOLUONG" Type="Double" />
     <Property Name="MANV" Type="Int32" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_HOPDONG_tb_NhanVien" FromRole="tb_HOPDONG" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_HOPDONG_tb_NhanVien" FromRole="tb_HOPDONG" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_KHENTHUONG_KYLUAT">
     <Key>
@@ -76,7 +162,7 @@
     <Property Name="NGAY" Type="DateTime" Precision="3" />
     <Property Name="MANV" Type="Int32" />
     <Property Name="LOAI" Type="Int32" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien" FromRole="tb_KHENTHUONG_KYLUAT" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien" FromRole="tb_KHENTHUONG_KYLUAT" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_LOAICA">
     <Key>
@@ -85,7 +171,7 @@
     <Property Name="IDLOAICA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENLOAICA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="HESO" Type="Double" />
-    <NavigationProperty Name="tb_TANGCA" Relationship="Self.FK_tb_TANGCA_tb_LOAICA" FromRole="tb_LOAICA" ToRole="tb_TANGCA" />
+    <NavigationProperty Name="tb_TANGCA" Relationship="QuanLyNhanSuModel.FK_tb_TANGCA_tb_LOAICA" FromRole="tb_LOAICA" ToRole="tb_TANGCA" />
   </EntityType>
   <EntityType Name="tb_LOAICONG">
     <Key>
@@ -94,7 +180,7 @@
     <Property Name="IDLC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENLOAICONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="HESO" Type="Double" />
-    <NavigationProperty Name="tb_BANGCONG" Relationship="Self.FK_tb_BANGCONG_tb_LOAICONG" FromRole="tb_LOAICONG" ToRole="tb_BANGCONG" />
+    <NavigationProperty Name="tb_BANGCONG" Relationship="QuanLyNhanSuModel.FK_tb_BANGCONG_tb_LOAICONG" FromRole="tb_LOAICONG" ToRole="tb_BANGCONG" />
   </EntityType>
   <EntityType Name="tb_NhanVien">
     <Key>
@@ -114,16 +200,19 @@
     <Property Name="IDTD" Type="Int32" />
     <Property Name="IDDANTOC" Type="Int32" />
     <Property Name="IDTONGIAO" Type="Int32" />
-    <NavigationProperty Name="tb_BANGCONG" Relationship="Self.FK_tb_BANGCONG_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_BANGCONG" />
-    <NavigationProperty Name="tb_BAOHIEM" Relationship="Self.FK_tb_BAOHIEM_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_BAOHIEM" />
-    <NavigationProperty Name="tb_BOPHAN" Relationship="Self.FK_tb_NhanVien_tb_BOPHAN" FromRole="tb_NhanVien" ToRole="tb_BOPHAN" />
-    <NavigationProperty Name="tb_CHUCVU" Relationship="Self.FK_tb_NhanVien_tb_CHUCVU" FromRole="tb_NhanVien" ToRole="tb_CHUCVU" />
-    <NavigationProperty Name="tb_HOPDONG" Relationship="Self.FK_tb_HOPDONG_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_HOPDONG" />
-    <NavigationProperty Name="tb_KHENTHUONG_KYLUAT" Relationship="Self.FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_KHENTHUONG_KYLUAT" />
-    <NavigationProperty Name="tb_NHANVIEN_PHUCAP" Relationship="Self.FK_tb_NHANVIEN_PHUCAP_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_NHANVIEN_PHUCAP" />
-    <NavigationProperty Name="tb_PHONGBAN" Relationship="Self.FK_tb_NhanVien_tb_PHONGBAN" FromRole="tb_NhanVien" ToRole="tb_PHONGBAN" />
-    <NavigationProperty Name="tb_TRINHDO" Relationship="Self.FK_tb_NhanVien_tb_TRINHDO" FromRole="tb_NhanVien" ToRole="tb_TRINHDO" />
-    <NavigationProperty Name="tb_TANGCA" Relationship="Self.FK_tb_TANGCA_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_TANGCA" />
+    <Property Name="IDCONGTY" Type="Int32" />
+    <Property Name="MACTY" Type="Int32" />
+    <NavigationProperty Name="tb_BANGCONG" Relationship="QuanLyNhanSuModel.FK_tb_BANGCONG_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_BANGCONG" />
+    <NavigationProperty Name="tb_BAOHIEM" Relationship="QuanLyNhanSuModel.FK_tb_BAOHIEM_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_BAOHIEM" />
+    <NavigationProperty Name="tb_BOPHAN" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_BOPHAN" FromRole="tb_NhanVien" ToRole="tb_BOPHAN" />
+    <NavigationProperty Name="tb_CONGTY" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_CONGTY1" FromRole="tb_NhanVien" ToRole="tb_CONGTY" />
+    <NavigationProperty Name="tb_CHUCVU" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_CHUCVU" FromRole="tb_NhanVien" ToRole="tb_CHUCVU" />
+    <NavigationProperty Name="tb_HOPDONG" Relationship="QuanLyNhanSuModel.FK_tb_HOPDONG_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_HOPDONG" />
+    <NavigationProperty Name="tb_KHENTHUONG_KYLUAT" Relationship="QuanLyNhanSuModel.FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_KHENTHUONG_KYLUAT" />
+    <NavigationProperty Name="tb_NHANVIEN_PHUCAP" Relationship="QuanLyNhanSuModel.FK_tb_NHANVIEN_PHUCAP_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_NHANVIEN_PHUCAP" />
+    <NavigationProperty Name="tb_PHONGBAN" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_PHONGBAN" FromRole="tb_NhanVien" ToRole="tb_PHONGBAN" />
+    <NavigationProperty Name="tb_TRINHDO" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_TRINHDO" FromRole="tb_NhanVien" ToRole="tb_TRINHDO" />
+    <NavigationProperty Name="tb_TANGCA" Relationship="QuanLyNhanSuModel.FK_tb_TANGCA_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_TANGCA" />
   </EntityType>
   <EntityType Name="tb_NHANVIEN_PHUCAP">
     <Key>
@@ -135,8 +224,8 @@
     <Property Name="NGAY" Type="DateTime" Precision="3" />
     <Property Name="NOIDUNG" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="SOTIEN" Type="Double" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_NHANVIEN_PHUCAP_tb_NhanVien" FromRole="tb_NHANVIEN_PHUCAP" ToRole="tb_NhanVien" />
-    <NavigationProperty Name="tb_PHUCAP" Relationship="Self.FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP" FromRole="tb_NHANVIEN_PHUCAP" ToRole="tb_PHUCAP" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_NHANVIEN_PHUCAP_tb_NhanVien" FromRole="tb_NHANVIEN_PHUCAP" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_PHUCAP" Relationship="QuanLyNhanSuModel.FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP" FromRole="tb_NHANVIEN_PHUCAP" ToRole="tb_PHUCAP" />
   </EntityType>
   <EntityType Name="tb_PHONGBAN">
     <Key>
@@ -144,7 +233,7 @@
     </Key>
     <Property Name="IDPB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENPB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_NhanVien_tb_PHONGBAN" FromRole="tb_PHONGBAN" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_PHONGBAN" FromRole="tb_PHONGBAN" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_PHUCAP">
     <Key>
@@ -153,7 +242,7 @@
     <Property Name="IDPC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENPC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SOTIEN" Type="Double" />
-    <NavigationProperty Name="tb_NHANVIEN_PHUCAP" Relationship="Self.FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP" FromRole="tb_PHUCAP" ToRole="tb_NHANVIEN_PHUCAP" />
+    <NavigationProperty Name="tb_NHANVIEN_PHUCAP" Relationship="QuanLyNhanSuModel.FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP" FromRole="tb_PHUCAP" ToRole="tb_NHANVIEN_PHUCAP" />
   </EntityType>
   <EntityType Name="tb_TANGCA">
     <Key>
@@ -166,8 +255,8 @@
     <Property Name="SOGIO" Type="Double" />
     <Property Name="MANV" Type="Int32" />
     <Property Name="IDLOAICA" Type="Int32" />
-    <NavigationProperty Name="tb_LOAICA" Relationship="Self.FK_tb_TANGCA_tb_LOAICA" FromRole="tb_TANGCA" ToRole="tb_LOAICA" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_TANGCA_tb_NhanVien" FromRole="tb_TANGCA" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_LOAICA" Relationship="QuanLyNhanSuModel.FK_tb_TANGCA_tb_LOAICA" FromRole="tb_TANGCA" ToRole="tb_LOAICA" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_TANGCA_tb_NhanVien" FromRole="tb_TANGCA" ToRole="tb_NhanVien" />
   </EntityType>
   <EntityType Name="tb_TONGIAO">
     <Key>
@@ -182,11 +271,11 @@
     </Key>
     <Property Name="IDTD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENTD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="tb_NhanVien" Relationship="Self.FK_tb_NhanVien_tb_TRINHDO" FromRole="tb_TRINHDO" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QuanLyNhanSuModel.FK_tb_NhanVien_tb_TRINHDO" FromRole="tb_TRINHDO" ToRole="tb_NhanVien" />
   </EntityType>
   <Association Name="FK_tb_BANGCONG_tb_LOAICONG">
-    <End Role="tb_LOAICONG" Type="Self.tb_LOAICONG" Multiplicity="0..1" />
-    <End Role="tb_BANGCONG" Type="Self.tb_BANGCONG" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_LOAICONG" Role="tb_LOAICONG" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_BANGCONG" Role="tb_BANGCONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_LOAICONG">
         <PropertyRef Name="IDLC" />
@@ -197,8 +286,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_BANGCONG_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
-    <End Role="tb_BANGCONG" Type="Self.tb_BANGCONG" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_BANGCONG" Role="tb_BANGCONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="MaNV" />
@@ -209,8 +298,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_BAOHIEM_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
-    <End Role="tb_BAOHIEM" Type="Self.tb_BAOHIEM" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_BAOHIEM" Role="tb_BAOHIEM" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="MaNV" />
@@ -221,8 +310,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_NhanVien_tb_BOPHAN">
-    <End Role="tb_BOPHAN" Type="Self.tb_BOPHAN" Multiplicity="0..1" />
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_BOPHAN" Role="tb_BOPHAN" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_BOPHAN">
         <PropertyRef Name="IDBP" />
@@ -232,9 +321,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tb_NhanVien_tb_CONGTY1">
+    <End Type="QuanLyNhanSuModel.tb_CONGTY" Role="tb_CONGTY" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CONGTY">
+        <PropertyRef Name="MACTY" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="MACTY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tb_NhanVien_tb_CHUCVU">
-    <End Role="tb_CHUCVU" Type="Self.tb_CHUCVU" Multiplicity="0..1" />
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_CHUCVU" Role="tb_CHUCVU" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_CHUCVU">
         <PropertyRef Name="IDCV" />
@@ -245,8 +346,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_HOPDONG_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
-    <End Role="tb_HOPDONG" Type="Self.tb_HOPDONG" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_HOPDONG" Role="tb_HOPDONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="MaNV" />
@@ -257,8 +358,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
-    <End Role="tb_KHENTHUONG_KYLUAT" Type="Self.tb_KHENTHUONG_KYLUAT" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_KHENTHUONG_KYLUAT" Role="tb_KHENTHUONG_KYLUAT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="MaNV" />
@@ -269,8 +370,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_TANGCA_tb_LOAICA">
-    <End Role="tb_LOAICA" Type="Self.tb_LOAICA" Multiplicity="0..1" />
-    <End Role="tb_TANGCA" Type="Self.tb_TANGCA" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_LOAICA" Role="tb_LOAICA" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_TANGCA" Role="tb_TANGCA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_LOAICA">
         <PropertyRef Name="IDLOAICA" />
@@ -281,8 +382,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_NHANVIEN_PHUCAP_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
-    <End Role="tb_NHANVIEN_PHUCAP" Type="Self.tb_NHANVIEN_PHUCAP" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NHANVIEN_PHUCAP" Role="tb_NHANVIEN_PHUCAP" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="MaNV" />
@@ -293,8 +394,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_NhanVien_tb_PHONGBAN">
-    <End Role="tb_PHONGBAN" Type="Self.tb_PHONGBAN" Multiplicity="0..1" />
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_PHONGBAN" Role="tb_PHONGBAN" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_PHONGBAN">
         <PropertyRef Name="IDPB" />
@@ -305,8 +406,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_NhanVien_tb_TRINHDO">
-    <End Role="tb_TRINHDO" Type="Self.tb_TRINHDO" Multiplicity="0..1" />
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_TRINHDO" Role="tb_TRINHDO" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_TRINHDO">
         <PropertyRef Name="IDTD" />
@@ -317,8 +418,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_TANGCA_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
-    <End Role="tb_TANGCA" Type="Self.tb_TANGCA" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_TANGCA" Role="tb_TANGCA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="MaNV" />
@@ -329,8 +430,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP">
-    <End Role="tb_PHUCAP" Type="Self.tb_PHUCAP" Multiplicity="0..1" />
-    <End Role="tb_NHANVIEN_PHUCAP" Type="Self.tb_NHANVIEN_PHUCAP" Multiplicity="*" />
+    <End Type="QuanLyNhanSuModel.tb_PHUCAP" Role="tb_PHUCAP" Multiplicity="0..1" />
+    <End Type="QuanLyNhanSuModel.tb_NHANVIEN_PHUCAP" Role="tb_NHANVIEN_PHUCAP" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_PHUCAP">
         <PropertyRef Name="IDPC" />
@@ -340,74 +441,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QuanLyNhanSuEntities1" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" />
-    <EntitySet Name="tb_BAOHIEM" EntityType="Self.tb_BAOHIEM" />
-    <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" />
-    <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" />
-    <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" />
-    <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" />
-    <EntitySet Name="tb_KHENTHUONG_KYLUAT" EntityType="Self.tb_KHENTHUONG_KYLUAT" />
-    <EntitySet Name="tb_LOAICA" EntityType="Self.tb_LOAICA" />
-    <EntitySet Name="tb_LOAICONG" EntityType="Self.tb_LOAICONG" />
-    <EntitySet Name="tb_NhanVien" EntityType="Self.tb_NhanVien" />
-    <EntitySet Name="tb_NHANVIEN_PHUCAP" EntityType="Self.tb_NHANVIEN_PHUCAP" />
-    <EntitySet Name="tb_PHONGBAN" EntityType="Self.tb_PHONGBAN" />
-    <EntitySet Name="tb_PHUCAP" EntityType="Self.tb_PHUCAP" />
-    <EntitySet Name="tb_TANGCA" EntityType="Self.tb_TANGCA" />
-    <EntitySet Name="tb_TONGIAO" EntityType="Self.tb_TONGIAO" />
-    <EntitySet Name="tb_TRINHDO" EntityType="Self.tb_TRINHDO" />
-    <AssociationSet Name="FK_tb_BANGCONG_tb_LOAICONG" Association="Self.FK_tb_BANGCONG_tb_LOAICONG">
-      <End Role="tb_LOAICONG" EntitySet="tb_LOAICONG" />
-      <End Role="tb_BANGCONG" EntitySet="tb_BANGCONG" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_BANGCONG_tb_NhanVien" Association="Self.FK_tb_BANGCONG_tb_NhanVien">
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_BANGCONG" EntitySet="tb_BANGCONG" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_BAOHIEM_tb_NhanVien" Association="Self.FK_tb_BAOHIEM_tb_NhanVien">
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_BAOHIEM" EntitySet="tb_BAOHIEM" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NhanVien_tb_BOPHAN" Association="Self.FK_tb_NhanVien_tb_BOPHAN">
-      <End Role="tb_BOPHAN" EntitySet="tb_BOPHAN" />
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NhanVien_tb_CHUCVU" Association="Self.FK_tb_NhanVien_tb_CHUCVU">
-      <End Role="tb_CHUCVU" EntitySet="tb_CHUCVU" />
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_HOPDONG_tb_NhanVien" Association="Self.FK_tb_HOPDONG_tb_NhanVien">
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_HOPDONG" EntitySet="tb_HOPDONG" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien" Association="Self.FK_tb_KHENTHUONG_KYLUAT_tb_NhanVien">
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_KHENTHUONG_KYLUAT" EntitySet="tb_KHENTHUONG_KYLUAT" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_TANGCA_tb_LOAICA" Association="Self.FK_tb_TANGCA_tb_LOAICA">
-      <End Role="tb_LOAICA" EntitySet="tb_LOAICA" />
-      <End Role="tb_TANGCA" EntitySet="tb_TANGCA" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NHANVIEN_PHUCAP_tb_NhanVien" Association="Self.FK_tb_NHANVIEN_PHUCAP_tb_NhanVien">
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_NHANVIEN_PHUCAP" EntitySet="tb_NHANVIEN_PHUCAP" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NhanVien_tb_PHONGBAN" Association="Self.FK_tb_NhanVien_tb_PHONGBAN">
-      <End Role="tb_PHONGBAN" EntitySet="tb_PHONGBAN" />
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NhanVien_tb_TRINHDO" Association="Self.FK_tb_NhanVien_tb_TRINHDO">
-      <End Role="tb_TRINHDO" EntitySet="tb_TRINHDO" />
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_TANGCA_tb_NhanVien" Association="Self.FK_tb_TANGCA_tb_NhanVien">
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_TANGCA" EntitySet="tb_TANGCA" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP" Association="Self.FK_tb_NHANVIEN_PHUCAP_tb_PHUCAP">
-      <End Role="tb_PHUCAP" EntitySet="tb_PHUCAP" />
-      <End Role="tb_NHANVIEN_PHUCAP" EntitySet="tb_NHANVIEN_PHUCAP" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

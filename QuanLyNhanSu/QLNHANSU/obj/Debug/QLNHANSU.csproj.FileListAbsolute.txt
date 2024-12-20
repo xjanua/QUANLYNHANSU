@@ -58,3 +58,6 @@ D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmDanToc.
 D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmTonGiao.resources
 D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmTrinhDo.resources
 D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmPhongBan.resources
+D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmCongTy.resources
+D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmBoPhan.resources
+D:\Projects\ProjectsC#_Super\QuanLyNhanSu\QLNHANSU\obj\Debug\QLNHANSU.frmChucVu.resources

@@ -298,7 +298,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmPhongBan";
-            this.Text = "frmPhongBan";
+            this.Text = "Phòng ban";
             this.Load += new System.EventHandler(this.frmPhongBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).EndInit();

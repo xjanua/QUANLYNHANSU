@@ -1,12 +1,70 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC42767-24D0-46BA-BE87-0A9789259C40}|QLNHANSU\\QLNHANSU.csproj|d:\\projects\\projectsc#_super\\quanlynhansu\\qlnhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC42767-24D0-46BA-BE87-0A9789259C40}|QLNHANSU\\QLNHANSU.csproj|solutionrelative:qlnhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC42767-24D0-46BA-BE87-0A9789259C40}|QLNHANSU\\QLNHANSU.csproj|d:\\projects\\projectsc#_super\\quanlynhansu\\qlnhansu\\frmbophan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC42767-24D0-46BA-BE87-0A9789259C40}|QLNHANSU\\QLNHANSU.csproj|solutionrelative:qlnhansu\\frmbophan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC42767-24D0-46BA-BE87-0A9789259C40}|QLNHANSU\\QLNHANSU.csproj|d:\\projects\\projectsc#_super\\quanlynhansu\\qlnhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEC42767-24D0-46BA-BE87-0A9789259C40}|QLNHANSU\\QLNHANSU.csproj|solutionrelative:qlnhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmBoPhan.cs",
+              "DocumentMoniker": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\QLNHANSU\\frmBoPhan.cs",
+              "RelativeDocumentMoniker": "QLNHANSU\\frmBoPhan.cs",
+              "ToolTip": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\QLNHANSU\\frmBoPhan.cs",
+              "RelativeToolTip": "QLNHANSU\\frmBoPhan.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAnwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T02:59:52.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmChucVu.cs",
+              "DocumentMoniker": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\QLNHANSU\\frmChucVu.cs",
+              "RelativeDocumentMoniker": "QLNHANSU\\frmChucVu.cs",
+              "ToolTip": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\QLNHANSU\\frmChucVu.cs",
+              "RelativeToolTip": "QLNHANSU\\frmChucVu.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAD4v0oAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T02:59:33.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmChucVu.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\QLNHANSU\\frmChucVu.cs",
+              "RelativeDocumentMoniker": "QLNHANSU\\frmChucVu.cs",
+              "ToolTip": "D:\\Projects\\ProjectsC#_Super\\QuanLyNhanSu\\QLNHANSU\\frmChucVu.cs [Design]",
+              "RelativeToolTip": "QLNHANSU\\frmChucVu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T02:59:32.462Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

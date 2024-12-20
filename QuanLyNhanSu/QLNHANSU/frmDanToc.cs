@@ -122,8 +122,11 @@ namespace QLNHANSU
 
         private void gvDanhSach_Click(object sender, EventArgs e)
         {
-            _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID").ToString());
-            txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENDT").ToString();
+            if (gvDanhSach.RowCount > 0)
+            {
+                _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID").ToString());
+                txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENDT").ToString();
+            }
         }
 
         private void gcDanhSach_Click(object sender, EventArgs e)

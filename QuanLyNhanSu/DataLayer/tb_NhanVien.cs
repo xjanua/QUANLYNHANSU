@@ -39,12 +39,15 @@ namespace DataLayer
         public Nullable<int> IDTD { get; set; }
         public Nullable<int> IDDANTOC { get; set; }
         public Nullable<int> IDTONGIAO { get; set; }
+        public Nullable<int> IDCONGTY { get; set; }
+        public Nullable<int> MACTY { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_BANGCONG> tb_BANGCONG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_BAOHIEM> tb_BAOHIEM { get; set; }
         public virtual tb_BOPHAN tb_BOPHAN { get; set; }
+        public virtual tb_CONGTY tb_CONGTY { get; set; }
         public virtual tb_CHUCVU tb_CHUCVU { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_HOPDONG> tb_HOPDONG { get; set; }

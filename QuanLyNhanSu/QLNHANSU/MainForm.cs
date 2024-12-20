@@ -55,5 +55,20 @@ namespace QLNHANSU
         {
             openForm(typeof(frmPhongBan));
         }
+
+        private void btnCongTy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmCongTy));
+        }
+
+        private void btnBoPhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmBoPhan));
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmChucVu));
+        }
     }
 }

@@ -32,6 +32,16 @@
     <Property Name="IDBP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENBP" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="tb_CONGTY">
+    <Key>
+      <PropertyRef Name="MACTY" />
+    </Key>
+    <Property Name="MACTY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENCONGTY" Type="nvarchar" MaxLength="100" />
+    <Property Name="DIENTHOAI" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="300" />
+  </EntityType>
   <EntityType Name="tb_CHUCVU">
     <Key>
       <PropertyRef Name="IDCV" />
@@ -105,6 +115,8 @@
     <Property Name="IDTD" Type="int" />
     <Property Name="IDDANTOC" Type="int" />
     <Property Name="IDTONGIAO" Type="int" />
+    <Property Name="IDCONGTY" Type="int" />
+    <Property Name="MACTY" Type="int" />
   </EntityType>
   <EntityType Name="tb_NHANVIEN_PHUCAP">
     <Key>
@@ -265,6 +277,18 @@ warning 6013: The table/view 'QuanLyNhanSu.dbo.tb_UNGLUONG' does not have a prim
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tb_NhanVien_tb_CONGTY1">
+    <End Role="tb_CONGTY" Type="Self.tb_CONGTY" Multiplicity="0..1" />
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CONGTY">
+        <PropertyRef Name="MACTY" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="MACTY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tb_NhanVien_tb_CHUCVU">
     <End Role="tb_CHUCVU" Type="Self.tb_CHUCVU" Multiplicity="0..1" />
     <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
@@ -332,6 +356,7 @@ error 6004: The table 'QuanLyNhanSu.dbo.tb_UNGLUONG' is referenced by a relation
     <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_BAOHIEM" EntityType="Self.tb_BAOHIEM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CONGTY" EntityType="Self.tb_CONGTY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" Schema="dbo" store:Type="Tables" />
@@ -375,6 +400,10 @@ error 6004: The table 'QuanLyNhanSu.dbo.tb_UNGLUONG' is referenced by a relation
     </AssociationSet>
     <AssociationSet Name="FK_tb_NhanVien_tb_BOPHAN" Association="Self.FK_tb_NhanVien_tb_BOPHAN">
       <End Role="tb_BOPHAN" EntitySet="tb_BOPHAN" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_CONGTY1" Association="Self.FK_tb_NhanVien_tb_CONGTY1">
+      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_NhanVien_tb_CHUCVU" Association="Self.FK_tb_NhanVien_tb_CHUCVU">
